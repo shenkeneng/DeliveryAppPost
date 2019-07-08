@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_item">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_password"
+                android:drawablePadding="5dp"
+                android:inputType="textPassword"
+                android:hint="@string/hint_login_password"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/confirm_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/confirm"
+                android:textStyle="bold"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/fab_margin"
+                android:background="@color/white"
+                android:padding="@dimen/fab_margin"/>
+
+            <View
+                android:layout_width="0.5px"
+                android:layout_height="match_parent"
+                android:background="@color/frxs_gray_dark"/>
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textStyle="bold"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/fab_margin"
+                android:background="@color/white"
+                android:padding="@dimen/fab_margin"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

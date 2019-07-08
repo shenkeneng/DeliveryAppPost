@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.frxs.delivery"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 20
+        versionName "4.3.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //配置keystore签名
+    signingConfigs {
+        debug {
+            storeFile file("frxs_key")
+            storePassword "frxs1234"
+            keyAlias "frxsapp"
+            keyPassword "frxs1234"
+        }
+        release {
+            storeFile file("frxs_key")
+            storePassword "frxs1234"
+            keyAlias "frxsapp"
+            keyPassword "frxs1234"
+        }
+    }
+
+    applicationVariants.all { variant ->    //批量修改Apk名字
+        variant.outputs.all { output ->
+            if (!variant.buildType.isDebuggable()) {
+                //获取签名的名字 variant.signingConfig.name
+                //要被替换的源字符串
+                def sourceFile = "app-release.apk"
+                //替换的字符串
+                def replaceFile = "delivery_${defaultConfig.versionCode}_${defaultConfig.versionName}-${releaseTime()}.apk"
+                outputFileName = output.outputFile.name.replace(sourceFile, replaceFile);
+                //遗留问题：如何获取当前module的name，如CodeBooke这个名字怎么获取到
+            } else {
+                //获取签名的名字 variant.signingConfig.name
+                //要被替换的源字符串
+                def sourceFile = "app-debug.apk"
+                //替换的字符串
+                def replaceFile = "delivery_${defaultConfig.versionCode}_${defaultConfig.versionName}-${variant.buildType.name}.apk"
+                outputFileName = output.outputFile.name.replace(sourceFile, replaceFile);
+            }
+        }
+    }
+
+    packagingOptions {//加上这写代码
+        pickFirst 'META-INF/*'
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':core')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/umeng-update-v2.5.0.jar')
+    compile files('libs/umeng-analytics-v5.6.4.jar')
+}

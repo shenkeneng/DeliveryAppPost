@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#d80c18</color>
+
+    <color name="red">#d80c18</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="green">#00cc66</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#909090</color>
+    <color name="divider_color">#ddd</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_gray">#55404040</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="dialog_font">#00ccff</color>
+    <color name="yellow_light">#fefff1</color>
+
+
+    <color name="frxs_red">#e60012</color>
+    <color name="frxs_red_light">#e74a56</color>
+    <color name="frxs_blue">#0096ff</color>
+    <color name="frxs_orange">#f0831e</color>
+    <color name="frxs_black_dark">#404040</color>
+    <color name="frxs_black_light">#909090</color>
+    <color name="frxs_gray_dark">#dfdfdf</color>
+    <color name="frxs_gray_light">#f8f8f8</color>
+    <color name="color_hint">#dbdbdb</color>
+
+    <!-- 扫一扫 -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+</resources>

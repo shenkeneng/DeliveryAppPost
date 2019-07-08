@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">配送</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="just_now">刚刚</string>
+    <string name="minute_format">%1$d分钟前</string>
+    <string name="hour_format">%1$d小时前</string>
+    <string name="today_hour_minute_pattern">今天 HH:mm</string>
+    <string name="yesterday_hour_minute_pattern">昨天 HH:mm</string>
+    <string name="month_day_hour_minute_pattern">M月d日 HH:mm</string>
+    <string name="date_hour_minute_pattern">Y年M月d日 HH:mm</string>
+
+    <string name="tips_sign_out">再按一次退出程序</string>
+
+    <!--LoginActivity-->
+    <string name="hint_login_account">输入账号</string>
+    <string name="hint_login_password">输入密码</string>
+    <string name="btn_login">登录</string>
+    <string name="tips_login_info">用户名或密码错误</string>
+    <string name="tips_null_account">您还没有填写账号</string>
+    <string name="tips_null_password">您还没有填写密码</string>
+    <string name="tips_input_limit">密码只能由数字、字母组成</string>
+    <string name="title_login">司机配送APP登录</string>
+    <string name="tips_environment">请选择环境[当前是：%1$s]</string>
+    <string name="tips_dialog_cancle">取消</string>
+    <string name="str_psw">frxs@123</string>
+
+
+    <!--UpdatePswActivity-->
+    <string name="title_update_password">修改密码</string>
+    <string name="hint_password_old">输入旧密码</string>
+    <string name="hint_password_new">输入新密码</string>
+    <string name="hint_password_new_sure">确认新密码</string>
+    <string name="btn_commit_psw">确认提交</string>
+    <string name="tips_not_null_pw_old">旧密码不能为空</string>
+    <string name="tips_not_null_pw_new">新密码不能为空</string>
+    <string name="tips_not_null_pw_new_sure">确认新密码不能为空</string>
+    <string name="tips_new_password_error">新密码确认错误</string>
+    <string name="tips_old_new_not_same">新密码不能和旧密码相同</string>
+    <string name="tips_update_success">密码修改成功</string>
+
+    <!--WaitingDeliveryFragment-->
+    <string name="title_waiting_delivery">等待配送</string>
+    <string name="title_scan_load">扫码装车</string>
+
+    <!--BeingDeliveryFragment-->
+    <string name="title_being_delivery">正在配送</string>
+    <string name="dialog_sign_all">【%1$s】在%2$s车次存在%3$s个正在配送的订单，合计金额：%4$.2f元，是否一起完成配送？</string>
+
+    <!--MinFragment-->
+    <string name="title_mine">关于我</string>
+    <string name="tv_login_out">退出用户</string>
+    <string name="tv_bill">配送明细</string>
+    <string name="tv_finsh_delivery">配送完成订单</string>
+    <string name="tv_change_password">用户修改密码</string>
+    <string name="tv_version_id">版本号:V%1$s</string>
+    <string name="can_not_find_version_name">(暂无版本号)</string>
+
+    <!-- 在线更新 -->
+    <string name="updade_content">最新版本：%1$s \n\n更新内容：\n%2$s</string>
+    <string name="update_title">发现版本更新</string>
+    <string name="update_ok">立即更新</string>
+    <string name="update_cancel">稍后更新</string>
+
+    <!--BillActivity-->
+    <string name="title_bill">配送明细·本月</string>
+    <string name="point_tv">（含绩效分：%1$s）</string>
+
+    <!--BillDetailsActivity-->
+    <string name="title_bill_detalis">配送明细</string>
+    <string name="tv_bill_cart_info">车次：%1$s，门店数：%2$s，绩效分：%3$.2f，附加绩效分：%4$s，调整分：%5$.2f</string>
+    <string name="tv_base_point">绩效分</string>
+    <string name="tv_point_ex">附加分</string>
+
+    <!--HomeActivity-->
+    <string name="dialog_not_delivery">请及时点击完成配送！</string>
+    <string name="scan_prompt"><Data><![CDATA[ %1$s司机您好，请扫码装第 <font color="#e60012">%2$d</font> 车]]> </Data></string>
+    <string name="click_for_scanning">点击扫描二维码</string>
+
+    <!-- ScanLoadingActivity -->
+    <string name="train"><Data><![CDATA[ 车次：<font color="#e60012">%1$d</font>]]> </Data></string>
+    <string name="finish_loading">确认装车</string>
+    <string name="cancel">取消</string>
+    <string name="total_point"><Data><![CDATA[ 绩效分：<font color="#404040">%1$.2f</font>]]> </Data></string>
+    <string name="ext_point"><Data><![CDATA[ 附加绩效分：<font color="#404040">%1$.2f</font>]]> </Data></string>
+    <string name="shop_count"><Data><![CDATA[ 门店数：<font color="#404040">%1$d</font>]]> </Data></string>
+    <string name="max_distance"><Data><![CDATA[ 最远公里数：<font color="#404040">%1$.2f</font>]]> </Data></string>
+    <string name="order_num"><Data><![CDATA[ 订单数：<font color="#404040">%1$d</font>]]> </Data></string>
+    <string name="order_amount"><Data><![CDATA[ 订单金额：<font color="#404040">￥%1$.2f</font>]]> </Data></string>
+    <string name="available_amount"><Data><![CDATA[ 可配送金额：<font color="#404040">￥%1$.2f ~ ￥%2$.2f</font>]]> </Data></string>
+    <string name="message_dialog">金额不足，是否确认接单？</string>
+    <string name="remark">本车次离起载金额还差%1$.2f元</string>
+
+    <!-- SalesReturnFragment -->
+    <string name="waiting_receiv">等待取货</string>
+    <string name="received">已取货</string>
+    <string name="hint_search">输入门店编号搜索</string>
+    <string name="tips_goods_count">收货数量为0不能提交，请提醒门店取消退货申请</string>
+
+    <!-- FinshDeliveryActivity -->
+    <string name="order_count">订单数量：%1$s</string>
+    <!--<string name="receiv_count">实收数量：%1$s</string>-->
+    <string name="order_id">订单编号：%1$s</string>
+    <string name="shop_name">门店：%1$s</string>
+    <string name="order_amt">金额：%1$s</string>
+
+    <!--LookSignatureActivity-->
+    <string name="sign_time">签名时间：%1$s</string>
+    <string name="sign_device_id">签名设备ID：%1$s</string>
+    <string name="gps">GPS坐标：%1$f，%2$f</string>
+    <string name="address">参考地址：%1$s</string>
+    <string name="sign_photo">签名现场图片：</string>
+    <string name="loog_sign">查看电子签名</string>
+
+    <!--SignatureActivity-->
+    <string name="order_id_kv">订单：%1$s</string>
+    <string name="sign_prompt">请确认签名：</string>
+    <string name="sign_amt_kv">签收金额：%1$.2f</string>
+    <string name="again">重拍</string>
+    <string name="change_camera">切换相机</string>
+    <string name="confirm">确认</string>
+    <string name="back">返回</string>
+
+    <!-- SignSuceessActivity -->
+    <string name="shop_delied_sucess">%1$s\n已完成配送</string>
+    <string name="shop_sign_sucess">%1$s\n已完成签名</string>
+    <string name="shop_delied_sucess_test">%1$s\n已完成签名，签名图片：%2$s；现场照片：%3$s。</string>
+
+    <!-- LoadCarSortActivity -->
+    <string name="load_car_sort">装车排序</string>
+    <string name="car_sort">第%1$s车</string>
+    <string name="take_picture_hint">此照片仅用于收货电子签名，阿必达平台不会将照片另做他用。</string>
+
+    <!-- ShippingDataFragment -->
+    <string name="tv_car_info">订单数：%1$s，门店数：%2$s，绩效分：%3$.2f，附加绩效分：%4$.2f，最远公里数：%5$.2f公里</string>
+</resources>

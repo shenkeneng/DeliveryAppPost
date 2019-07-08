@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/frxs_red"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/selector_left"
+            android:onClick="onBack"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="5dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/selector_refresh"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="刷新"
+            android:textColor="@drawable/selector_text_white"
+            android:textSize="16sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_color" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scrollview"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="100dp"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:background="#d80c18" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv_commodity_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/white"
+            android:dividerHeight="0px"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_type_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品总数量：        "
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/tv_type_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(共计0行)"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

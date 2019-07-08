@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.frxs.delivery">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 扫一扫 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Umeng statistical required permission start -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--判断后台的方式-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- Umeng statistical required permission end -->
+    <!-- 声明使用相机功能 -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- 使用相机的前置摄像头功能  required="false" ：则意味着如果设备支持则应用程序将优先使用此特性，但设计程序时是考虑没有该项特性也能正常工作的。-->
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <!-- 位置权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 手机权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:name="com.frxs.delivery.application.FrxsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.frxs.delivery.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.frxs.delivery.LoginActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.frxs.delivery.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.frxs.delivery.UpdatePswActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.frxs.delivery.OrderDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.frxs.delivery.BillActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.frxs.delivery.BillDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.frxs.delivery.zxing.CaptureActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.frxs.delivery.ScanLoadingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".FinshDeliveryActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 正在收货商品页面 -->
+        <activity
+            android:name=".ReceivingActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 电子签名页面 -->
+        <activity
+            android:name=".SignatureActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity
+            android:name=".TakePictureActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <!-- 查看签名页面 -->
+        <activity
+            android:name=".LookSignatureActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 签名完成跳转页面 -->
+        <activity android:name=".SignSuceessActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 扫码装车排序页面 -->
+        <activity android:name=".LoadCarSortActivity"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57c7d5c467e58e48020021b7"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng"></meta-data>
+
+        <!-- 兼容6.0、7.0安装应用文件的uri地址不同的问题 -->
+     <!--   <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource"/>
+        </provider>-->
+    </application>
+
+</manifest>

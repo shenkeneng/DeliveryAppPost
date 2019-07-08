@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/frxs_gray_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_red" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/select_environment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="80dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/icon_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp">
+
+        <EditText
+            android:id="@+id/login_account_edit"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/circle_frame_border"
+            android:drawableLeft="@mipmap/icon_account"
+            android:drawablePadding="5dp"
+            android:hint="@string/hint_login_account"
+            android:lines="1"
+            android:padding="5dp"
+            android:textColor="@color/frxs_black_light"
+            android:textColorHint="@color/frxs_gray_dark" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/login_password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_frame_border"
+        android:drawableLeft="@mipmap/icon_password"
+        android:drawablePadding="5dp"
+        android:hint="@string/hint_login_password"
+        android:imeOptions="actionGo"
+        android:lines="1"
+        android:padding="5dp"
+        android:password="true"
+        android:textColor="@color/frxs_black_light"
+        android:textColorHint="@color/frxs_gray_dark" />
+
+
+    <Button
+        android:id="@+id/login_commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/red_round_corner_rectangle"
+        android:padding="10dp"
+        android:text="@string/btn_login"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>
